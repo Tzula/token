@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container homepage">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron hero-spacer custom-primary">
+            <h1>Looking For Advertising Tokens?</h1>
+            <p>If you're an online advertiser using paid traffic sources to drive visitors to your landing pages, then
+                you know you need to be tracking your results. We list the tokens (also called macros, variables, etc.)
+                from some of the most popular paid traffic networks. You can setup these tokens in any <a
+                        href="../recommended-tracking-software/">tracking software of your choice</a>.</p>
+        </header>
+
+        <hr/>
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                <a href="http://discourse.newbidder.com/t/what-is-the-ultimate-tracking-software-for-affiliate-marketing/47"><img
+                        class="img-responsive center-block" src="../static/images/filter.jpg
+" alt="Advault"/></a>
+                <hr/>
+            </div>
+        </div>
+
+        <!-- START TOKEN HEADER -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="well well-lg clearfix">
+                    <h2 style="display: inline;" class="hidden-sm hidden-xs "><i class="fa fa-line-chart"></i> Current
+                        Traffic Network Tokens</h2>
+                    <h2 style="display: inline;" class="hidden-lg hidden-md hidden-xs"><i class="fa fa-line-chart"></i>
+                        Current Traffic Tokens</h2>
+                    <div class="btn-group btn-group-lg pull-right" style="margin-top: -6px;">
+                        <button type="button" class="btn btn-primary">Select Traffic Network</button>
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            {% for i in ret %}
+                                <li><a href='{{ i[2] }}'>{{ i[0] }} Tokens</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END TOKEN HEADER -->
+
+
+        <div class="well well-lg">
+            <div class="row">
+                <div class="col-lg-12">
+
+
+                    <!-- START TOKEN LIST -->
+                    <div class="row text-center">
+
+                        <!-- START BLOCK -->
+                        {% for i in ret %}
+                            <div class="col-md-3 col-sm-6">
+                                <div class="thumbnail">
+                                    <!--<img src="http://placehold.it/800x500" alt="">-->
+                                    <div class="caption">
+                                        <h3>{{ i[0] }}</h3>
+                                        <p>{{ i[1] }}</p>
+                                        <p><a href="{{ i[2] }}" class="btn btn-success btn-block btn-lg">View Tokens <i
+                                                class="fa fa-arrow-circle-right fa-lg"></i></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <!-- END BLOCK -->
+                        <!-- START BLOCK -->
+
+                        <!-- END BLOCK -->
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- START TOKEN MESSAGE -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="well well-lg text-center">
+                    <h2 style="display: inline; padding-right: 10px;">Want to Help?</h2><a href="../contact/"
+                                                                                           class="btn btn-danger btn-lg"
+                                                                                           style="margin-top: -6px;">Submit
+                    New or Missing Tokens Here!</a>
+                </div>
+            </div>
+        </div>
+        <!-- END TOKEN MESSAGE -->
+
+        <hr/>
+
+        
+
+</div>
+        <!--
+
+        AdultModa.com
+
+        -->
+
+
+        <!-- START FOOTER -->
+
+        <footer>
+            <hr/>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p><a href="../">Home</a> | <a href="../privacy/">Privacy</a> | <a href="../terms/">Terms</a> | <a
+                            href="../faq/">FAQ</a> | <a href="../contact/">Contact</a></p>
+                    <p>Copyright &copy; 2015 - 2018 TrackingTokens.com</p>
+                </div>
+            </div>
+        </footer>
+
+{#        <script src="//static.getclicky.com/js" type="text/javascript"></script>#}
+{#        <script type="text/javascript">try {#}
+{#            clicky.init(100891035);#}
+{#        } catch (e) {#}
+{#        }</script>#}
+{#        <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100891035ns.gif"/></p></noscript>#}
+
+{#        <script type="text/javascript">#}
+{#            adroll_adv_id = "SJNTCA5QANC7XPREENNM6B";#}
+{#            adroll_pix_id = "PXJ664XU4RDL5EAJZTQIUV";#}
+{#            /* OPTIONAL: provide email to improve user identification */#}
+{#            /* adroll_email = "username@example.com"; */#}
+{#            (function () {#}
+{#                var _onload = function () {#}
+{#                    if (document.readyState && !/loaded|complete/.test(document.readyState)) {#}
+{#                        setTimeout(_onload, 10);#}
+{#                        return#}
+{#                    }#}
+{#                    if (!window.__adroll_loaded) {#}
+{#                        __adroll_loaded = true;#}
+{#                        setTimeout(_onload, 50);#}
+{#                        return#}
+{#                    }#}
+{#                    var scr = document.createElement("script");#}
+{#                    var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");#}
+{#                    scr.setAttribute('async', 'true');#}
+{#                    scr.type = "text/javascript";#}
+{#                    scr.src = host + "/j/roundtrip.js";#}
+{#                    ((document.getElementsByTagName('head') || [null])[0] ||#}
+{#                    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);#}
+{#                };#}
+{#                if (window.addEventListener) {#}
+{#                    window.addEventListener('load', _onload, false);#}
+{#                }#}
+{#                else {#}
+{#                    window.attachEvent('onload', _onload)#}
+{#                }#}
+{#            }());#}
+{#        </script><!-- END FOOTER -->#}
+
+
+{% endblock %}
